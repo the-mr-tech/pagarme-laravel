@@ -8,10 +8,26 @@
             "email": "lucas.pires.mattos@gmail.com"
         }
     ],
+    
+    "repositories": [
+        {
+            "type":"package",
+            "package": {
+              "name": "marcelotadeujr/pagarme-php",
+              "version":"master",
+              "source": {
+                  "url": "https://github.com/marcelotadeujr/pagarme-php.git",
+                  "type": "git",
+                  "reference":"master"
+                }
+            }
+        }
+    ],
+    
     "require": {
         "php": "~5.5||~7.0",
         "illuminate/support": "^5.1",
-        "pagarme/pagarme-php": "^3.2"
+        "marcelotadeujr/pagarme-php": "master"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8",
