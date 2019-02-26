@@ -2,6 +2,7 @@
 
 namespace FlyingLuscas\PagarMeLaravel;
 
+use PagarMe\Client;
 use PagarMe\Sdk\PagarMe;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
@@ -36,7 +37,7 @@ class PagarMeServiceProvider extends ServiceProvider
         $this->bindBladeCompilerIfNeeded();
 
         $this->app->singleton('PagarMe', function ($app) {
-            return new PagarMe(
+            return new Client(
                 $app->config->get('pagarme.keys.api')
             );
         });
